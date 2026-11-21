@@ -1,43 +1,43 @@
 ﻿image,label,field,issue,mine,peer,verdict,guideline_rule,action
-D03.png,face,gaze_zone,khác giá trị (IoU=0.79),other,road,,,
-D04.png,face13,mouth_left.occluded,khác cờ,0,1,,,
-D05.png,face,gaze_zone,khác giá trị (IoU=0.76),other,road,,,
-D05.png,phone,box,chỉ có ở peer (hoặc IoU thấp),,,,,
-D06.png,face,eye_left,khác giá trị (IoU=0.83),open,closed,,,
-D06.png,face,eye_right,khác giá trị (IoU=0.83),open,closed,,,
-D06.png,face,gaze_zone,khác giá trị (IoU=0.83),other,road,,,
-S01_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,,
-S01_ir.png,face,eye_left,khác giá trị (IoU=0.95),unknown,open,,,
-S01_ir.png,face,gaze_zone,khác giá trị (IoU=0.95),other,lap,,,
-S01_ir.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,,
-S01_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,,
-S01_rgb.png,face,eye_left,khác giá trị (IoU=0.92),unknown,open,,,
-S01_rgb.png,face,gaze_zone,khác giá trị (IoU=0.92),other,lap,,,
-S01_rgb.png,face,glasses,khác giá trị (IoU=0.92),unknown,none,,,
-S01_rgb.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,,
-S02_ir.png,child_seat,occupied,khác giá trị (IoU=0.93),yes,no,,,
-S02_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,,
-S02_ir.png,face,gaze_zone,khác giá trị (IoU=0.88),other,center,,,
-S02_ir.png,face,glasses,khác giá trị (IoU=0.88),unknown,none,,,
-S02_rgb.png,face,gaze_zone,khác giá trị (IoU=0.92),other,center,,,
-S02_rgb.png,face,glasses,khác giá trị (IoU=0.92),unknown,none,,,
-S02_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,,
-S03_ir.png,object,type,khác giá trị (IoU=0.87),bag,other,,,
-S03_rgb.png,object,type,khác giá trị (IoU=0.92),bag,other,,,
-S04_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,,
-S04_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,,
-S05_ir.png,face,gaze_zone,khác giá trị (IoU=0.94),mirror_c,center,,,
-S05_rgb.png,face,gaze_zone,khác giá trị (IoU=0.99),mirror_c,center,,,
-S05_rgb.png,face,glasses,khác giá trị (IoU=0.99),unknown,none,,,
-S07_ir.png,face,gaze_zone,khác giá trị (IoU=0.77),other,lap,,,
-S07_ir.png,face,glasses,khác giá trị (IoU=0.77),unknown,none,,,
-S07_ir.png,face,eye_left,khác giá trị (IoU=0.53),open,unknown,,,
-S07_ir.png,face,eye_right,khác giá trị (IoU=0.53),unknown,open,,,
-S07_ir.png,face,gaze_zone,khác giá trị (IoU=0.53),other,center,,,
-S07_ir.png,face,glasses,khác giá trị (IoU=0.53),unknown,none,,,
-S07_rgb.png,face,gaze_zone,khác giá trị (IoU=0.75),other,lap,,,
-S07_rgb.png,face,glasses,khác giá trị (IoU=0.75),unknown,none,,,
-S07_rgb.png,face,gaze_zone,khác giá trị (IoU=0.53),other,center,,,
-S07_rgb.png,face,glasses,khác giá trị (IoU=0.53),unknown,none,,,
-S08_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,,
-S08_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,,
+D03.png,face,gaze_zone,khác giá trị (IoU=0.79),other,road,ambiguous,4.5,ảnh NIR tối khó chốt hướng nhìn nên tạm giữ other và hỏi coach
+D04.png,face13,mouth_left.occluded,khác cờ,0,1,peer,4.6,"kiểm lại khóe miệng trái trên D04, nếu bị che thì bật occluded=1"
+D05.png,face,gaze_zone,khác giá trị (IoU=0.76),other,road,ambiguous,4.5,hướng nhìn ở ranh giới road/center nên tạm giữ other và hỏi coach
+D05.png,phone,box,chỉ có ở peer (hoặc IoU thấp),,,mine,4.7,không thấy rõ cạnh hay màn hình điện thoại nên không vẽ box phone
+D06.png,face,eye_left,khác giá trị (IoU=0.83),open,closed,ambiguous,4.5,"soi lại khe mắt trái qua kính trên D06, nếu lóa không rõ thì đổi unknown"
+D06.png,face,eye_right,khác giá trị (IoU=0.83),open,closed,ambiguous,4.5,"soi lại khe mắt phải qua kính trên D06, nếu lóa không rõ thì đổi unknown"
+D06.png,face,gaze_zone,khác giá trị (IoU=0.83),other,road,ambiguous,4.5,"kiểm lại hướng nhìn trên D06, không chắc nhìn thẳng đường thì giữ other"
+S01_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,4.2,"bỏ box person lồng trong infant_seat theo mục 3 và 4.2, báo coach ca hình trẻ em"
+S01_ir.png,face,eye_left,khác giá trị (IoU=0.95),unknown,open,mine,4.1,OMS chỉ cần box face; mắt trái cũng bị khuất nên giữ unknown theo 4.4-1
+S01_ir.png,face,gaze_zone,khác giá trị (IoU=0.95),other,lap,mine,4.1,"giữ mặc định other vì OMS chỉ yêu cầu vẽ box face, không cần gán gaze_zone"
+S01_ir.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,ambiguous,4.2,"kiểm lại ghế giữa S01: nếu là cốc mang theo thì vẽ thêm object, nếu là chi tiết xe thì bỏ"
+S01_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,4.2,"bỏ box person lồng trong infant_seat theo mục 3 và 4.2, báo coach ca hình trẻ em"
+S01_rgb.png,face,eye_left,khác giá trị (IoU=0.92),unknown,open,mine,4.1,OMS chỉ cần box face; mắt trái không rõ nên giữ unknown theo 4.4-1
+S01_rgb.png,face,gaze_zone,khác giá trị (IoU=0.92),other,lap,mine,4.1,giữ mặc định other vì OMS chỉ yêu cầu vẽ box face
+S01_rgb.png,face,glasses,khác giá trị (IoU=0.92),unknown,none,mine,4.1,giữ mặc định unknown vì OMS chỉ yêu cầu vẽ box face (và S01_rgb hơi tối)
+S01_rgb.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,ambiguous,4.2,kiểm lại ghế giữa S01: nếu là cốc mang theo thì bổ sung object như peer
+S02_ir.png,child_seat,occupied,khác giá trị (IoU=0.93),yes,no,both_wrong,4.8,"schema không có occupied=yes và ghế có hình bên trong nên báo coach, tạm để unknown"
+S02_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,4.2,"bỏ box person lồng trong child_seat theo mục 3 và 4.2, báo coach"
+S02_ir.png,face,gaze_zone,khác giá trị (IoU=0.88),other,center,mine,4.1,giữ mặc định other vì OMS chỉ yêu cầu vẽ box face
+S02_ir.png,face,glasses,khác giá trị (IoU=0.88),unknown,none,mine,4.1,giữ mặc định unknown vì OMS chỉ yêu cầu vẽ box face
+S02_rgb.png,face,gaze_zone,khác giá trị (IoU=0.92),other,center,mine,4.1,giữ mặc định other vì OMS chỉ yêu cầu vẽ box face
+S02_rgb.png,face,glasses,khác giá trị (IoU=0.92),unknown,none,mine,4.1,giữ mặc định unknown vì OMS chỉ yêu cầu vẽ box face
+S02_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,4.2,"bỏ box person lồng trong child_seat theo mục 3 và 4.2, báo coach"
+S03_ir.png,object,type,khác giá trị (IoU=0.87),bag,other,peer,4.8,ảnh IR mất màu khó chắc là túi nên đổi object.type sang other theo mục 4.8
+S03_rgb.png,object,type,khác giá trị (IoU=0.92),bag,other,peer,4.8,"kiểm lại vật ở ghế giữa S03_rgb, nếu hình dạng không rõ là túi thì đổi sang other"
+S04_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,4.2,"bỏ box person lồng trong infant_seat theo mục 3 và 4.2, báo coach"
+S04_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,4.2,"bỏ box person lồng trong infant_seat theo mục 3 và 4.2, báo coach"
+S05_ir.png,face,gaze_zone,khác giá trị (IoU=0.94),mirror_c,center,both_wrong,4.1,"OMS chỉ cần box face theo mục 4.1, để gaze_zone mặc định other cho gọn"
+S05_rgb.png,face,gaze_zone,khác giá trị (IoU=0.99),mirror_c,center,both_wrong,4.1,"OMS chỉ cần box face theo mục 4.1, để gaze_zone mặc định other cho gọn"
+S05_rgb.png,face,glasses,khác giá trị (IoU=0.99),unknown,none,mine,4.4-1,giữ unknown vì S05_rgb rất tối không thấy rõ mắt (và OMS cũng chỉ cần box face)
+S07_ir.png,face,gaze_zone,khác giá trị (IoU=0.77),other,lap,mine,4.1,giữ mặc định other vì OMS chỉ yêu cầu vẽ box face
+S07_ir.png,face,glasses,khác giá trị (IoU=0.77),unknown,none,mine,4.1,giữ mặc định unknown vì OMS chỉ yêu cầu vẽ box face
+S07_ir.png,face,eye_left,khác giá trị (IoU=0.53),open,unknown,peer,4.4-2,"bị đảo trái/phải so với S07_rgb, sửa lại eye_left=unknown theo người trong ảnh"
+S07_ir.png,face,eye_right,khác giá trị (IoU=0.53),unknown,open,peer,4.4-2,"bị đảo trái/phải so với S07_rgb, sửa lại eye_right=open theo người trong ảnh"
+S07_ir.png,face,gaze_zone,khác giá trị (IoU=0.53),other,center,mine,4.1,giữ mặc định other vì OMS chỉ yêu cầu vẽ box face
+S07_ir.png,face,glasses,khác giá trị (IoU=0.53),unknown,none,mine,4.1,giữ mặc định unknown vì OMS chỉ yêu cầu vẽ box face
+S07_rgb.png,face,gaze_zone,khác giá trị (IoU=0.75),other,lap,mine,4.1,giữ mặc định other vì OMS chỉ yêu cầu vẽ box face
+S07_rgb.png,face,glasses,khác giá trị (IoU=0.75),unknown,none,mine,4.1,giữ mặc định unknown vì OMS chỉ yêu cầu vẽ box face
+S07_rgb.png,face,gaze_zone,khác giá trị (IoU=0.53),other,center,mine,4.1,giữ mặc định other vì OMS chỉ yêu cầu vẽ box face
+S07_rgb.png,face,glasses,khác giá trị (IoU=0.53),unknown,none,mine,4.1,giữ mặc định unknown vì OMS chỉ yêu cầu vẽ box face
+S08_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,4.2,"bỏ box person lồng trong infant_seat theo mục 3 và 4.2, báo coach"
+S08_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,4.2,bỏ box person lồng trong infant_seat (và bản S08_rgb còn bị nhầm ghế rear_left)
