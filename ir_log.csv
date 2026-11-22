@@ -1,7 +1,7 @@
 frame_id,source,phenomenon,affected_field,effect_on_label
-S05_ir,IR_sim,"bản RGB rất tối, sang IR-sim nhìn sáng hơn hẳn ở hàng ghế sau nhưng mất màu",glasses,"bên S05_rgb không thấy rõ nên để unknown, sang S05_ir thấy không đeo kính nên gán none"
+S05_ir,IR_sim,"bản RGB rất tối, sang IR-sim nhìn sáng hơn hẳn ở hàng ghế sau nhưng mất màu",glasses,"lúc đầu bên S05_rgb tối quá phải để unknown, sang S05_ir mới thấy rõ không đeo kính nên gán none"
 S01_ir,IR_sim,"ảnh IR-sim sáng hơn bản RGB một chút nhưng phần mặt bị nghiêng bên trái vẫn tối và không có màu",eye_left,"không thấy rõ khe mắt trái nên vẫn để unknown như bên RGB, không đoán theo mắt phải"
-S03_ir,IR_sim,"ảnh đen trắng mất màu nên món đồ ở ghế giữa chỉ nhìn được dáng, không rõ chất liệu",object.type,"chỉ dựa vào hình dáng để phân loại nên dễ nhầm (mình gán bag còn bạn cùng nhóm gán other)"
+S03_ir,IR_sim,"ảnh đen trắng mất màu nên món đồ ở ghế giữa chỉ nhìn được dáng, không rõ chất liệu",object.type,"chỉ dựa vào hình dáng để phân loại nên dễ lệch nhãn (mình giữ bag còn bạn cùng nhóm chọn other)"
 D03,real_IR,"ảnh NIR tối và ít tương phản, nhìn qua kính không thấy rõ đồng tử tài xế nhìn hướng nào",gaze_zone,"phải kéo sáng trên CVAT mới đặt được face13, còn hướng nhìn không chắc nên để other"
-D05,real_IR,"vùng quanh tay và mặt khá tối trên ảnh NIR, vật cầm gần tay không rõ cạnh hay màn hình",phone,"không chắc là điện thoại nên không vẽ box phone theo guideline (khác với bạn có vẽ held)"
-D06,real_IR,"ánh sáng trên ảnh NIR làm tròng kính tài xế hơi chói, khó nhìn rõ khe mắt",eye_left,"dễ nhầm mắt mở với mắt nhắm (mình chọn open, bạn chọn closed), chỗ nào chói che mất mí thì phải để unknown"
+D05,real_IR,"vùng quanh tay và mặt khá tối trên ảnh NIR, vật tối cầm gần tay mất tương phản màu và màn hình",phone,"lúc gán lần đầu rất dễ bỏ sót không vẽ phone; sau review kéo sáng trên CVAT nhìn rõ cạnh máy mới bổ sung phone (held) ở bản v2"
+D06,real_IR,"ánh sáng trên ảnh NIR làm tròng kính tài xế hơi chói, khó nhìn rõ khe mắt lúc nhìn lướt",eye_left,"dễ nhầm mắt mở với mắt nhắm (lần đầu chọn open, sau soi kỹ lại thấy mí khép nên đổi sang closed ở bản v2)"

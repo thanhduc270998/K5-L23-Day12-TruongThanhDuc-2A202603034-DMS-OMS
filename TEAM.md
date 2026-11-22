@@ -5,7 +5,7 @@ Mã bộ ảnh: **G08** · Hình thức: nhóm
 | Họ tên | MSSV | Đã gán đủ 22 ảnh? | Review chéo với (peer diff) | Số dòng disagreement đã xử lý |
 |---|---|---|---|---|
 | Huỳnh Nhật Quang| 2A202603113 | đã gán đủ | Nhóm | 11 |
-| Trương Thành Đức  | 2A202603034 | đã gán đủ | Nhóm | |
+| Trương Thành Đức  | 2A202603034 | đã gán đủ | Nhóm | 42 |
 | Vũ Việt Anh  | 2A202603214 | đã gán đủ | Nhóm | |
 
 Ca ba bạn vẫn không thống nhất và đã hỏi coach (ghi tên ảnh + đối tượng):
